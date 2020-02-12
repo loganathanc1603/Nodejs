@@ -1,5 +1,11 @@
 Node js practice
 
+Youtube url:
+https://www.youtube.com/watch?v=zlId7N7DDOY
+
+npm url:
+https://www.npmjs.com/
+
 https://nodejs.org/docs/latest/api/os.html
 
 initalise the npm to our folder
