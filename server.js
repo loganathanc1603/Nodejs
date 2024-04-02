@@ -1,5 +1,5 @@
 // const express = require('express');
-// const { createProxyMiddleware } = require('http-proxy-middleware');
+// { createProxyMiddleware } = require('http-proxy-middleware');
 
 // const app = express();
 
@@ -11,8 +11,12 @@ const express = require('express');
 const app = express();
 const port =process.env.PORT || 5000;
 
-app.get("/User", (req, res) => {
+app.get("/UserName", (req, res) => {
     res.json({ FullName: 'Loganathan Chinnasamy' });
+});
+
+app.get("/UserDetails", (req, res) => {
+    res.json({ FullName: 'Loganathan Chinnasamy', Mobile: 9123456789, email:"xyz@xyz.com" });
 });
 
 app.listen(port, () => {
