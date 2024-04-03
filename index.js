@@ -21,6 +21,16 @@ app.use(jsonParser);
 app.use("/api/v1/movies", moviesController);
 app.use("/api/v1/movies", reviewController);
 
+app.get('/getCurrentDate', (req, res) => {
+  const currentTime = new Date().toLocaleString();
+  res.json(
+    {
+      CurrentTime: currentTime,
+      Timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+    }
+    );
+});
+
 const PORT = process.env.PORT ?? 3000;
 app.listen(PORT, () => {
   console.log(`Movie Database listening in localhost:${PORT}`);
